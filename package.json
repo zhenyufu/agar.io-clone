@@ -33,6 +33,10 @@
     "VILLERS Mickaël <mickael.villers@epitech.eu> (https://github.com/villers)",
     "wb9688 <wbertrums@gmail.com> (https://github.com/wb9688)"
   ],
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.9.0"
+  },
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
