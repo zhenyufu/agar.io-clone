@@ -360,7 +360,7 @@ io.on('connection', function (socket) {
             socket.broadcast.emit('serverMSG', currentPlayer.name + ' just logged in as admin!');
             currentPlayer.admin = true;
         } else {
-            
+
             // TODO: Actually log incorrect passwords.
               console.log('[ADMIN] ' + currentPlayer.name + ' attempted to log in with incorrect password.');
               socket.emit('serverMSG', 'Password incorrect, attempt logged.');
@@ -529,7 +529,7 @@ function tickPlayer(currentPlayer) {
     }
 
     function collisionCheck(collision) {
-        if (collision.aUser.mass > collision.bUser.mass * 1.1  && collision.aUser.radius > Math.sqrt(Math.pow(collision.aUser.x - collision.bUser.x, 2) + Math.pow(collision.aUser.y - collision.bUser.y, 2))*1.75) {
+        if (collision.aUser.mass > collision.bUser.mass * 1.01  && collision.aUser.radius > Math.sqrt(Math.pow(collision.aUser.x - collision.bUser.x, 2) + Math.pow(collision.aUser.y - collision.bUser.y, 2))*1.10) {
             console.log('[DEBUG] Killing user: ' + collision.bUser.id);
             console.log('[DEBUG] Collision info:');
             console.log(collision);
